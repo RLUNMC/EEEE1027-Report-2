@@ -315,9 +315,7 @@ void moveStarting(bool sensorLeftReading, bool sensorRightReading) {
     left();
   } else if(sensorLeftReading && !sensorRightReading) {
     right();
-  } else {
-    stop();
-  }
+  } 
 }
 
 void move(bool sensorLeftReading, bool sensorRightReading) {
@@ -351,9 +349,7 @@ void moveDownRamp(bool sensorLeftReading, bool sensorRightReading) {
     left();
   } else if(sensorLeftReading && !sensorRightReading) {
     right();
-  } else {
-    stop();
-  }
+  } 
 }
 
 void moveAverage(bool sensorLeftReading, bool sensorRightReading) {
@@ -363,9 +359,7 @@ void moveAverage(bool sensorLeftReading, bool sensorRightReading) {
     left();
   } else if(sensorLeftReading && !sensorRightReading) {
     right();
-  } else {
-    stop();
-  }
+  } 
 }
 
 void displayAngle(float angle) {
