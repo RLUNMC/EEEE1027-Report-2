@@ -368,16 +368,6 @@ void moveAverage(bool sensorLeftReading, bool sensorRightReading) {
   }
 }
 
-void moveBoost(bool sensorLeftReading, bool sensorRightReading) {
-  if((sensorLeftReading && sensorRightReading) || (!sensorLeftReading && !sensorRightReading)) {
-    boost();
-  } else if(!sensorLeftReading && sensorRightReading) {
-    left();
-  } else if(sensorLeftReading && !sensorRightReading) {
-    right();
-  } 
-}
-
 void displayAngle(float angle) {
   lcd.setCursor(0, 0);
   lcd.print("A = ");
