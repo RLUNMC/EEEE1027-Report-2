@@ -132,13 +132,6 @@ void loop() {
       stop();
     }
     else if(millis()-s1Time>s1EndTime) {
-      if(!calibrateAngle) {
-        if (abs(rampAngle) < resetThreshold) {
-          rampAngle = 0.0;
-          s2Time = millis();
-          calibrateAngle = true;
-        }
-      }
       if(rampAngle>7.0) {
         moveAverage(sensorLeftReading, sensorRightReading);
       } if(rampAngle<7.0) {
@@ -149,7 +142,6 @@ void loop() {
         rotation360();
         stop();
         delay(2000);
-        s3Time = millis();
         upRamp = false;
         downRamp = true;
       }
